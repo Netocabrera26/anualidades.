@@ -7,11 +7,11 @@ formulario.interes.oninput = calcularAV
 
 
 function calcularAV() {
-    let v = parseFloat(formulario.renta.value)
+    let r = parseFloat(formulario.renta.value)
     let n = parseFloat(formulario.tiempo.value)
     let i = parseFloat((formulario.interes.value)/100)
 
-    let total = (i*((1+i)**n)) / (((1+i)**n)-1)*v
+    let total =  (((1-(1+i))**-n)/i)*r
 
     resultado.innerHTML = total.toFixed(2)
 }
